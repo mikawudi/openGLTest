@@ -390,13 +390,13 @@ int main()
 	glUseProgram(shaderProgram);
 	*/
 	ShaderProgramer* programer = new ShaderProgramer(
-		"c:\\Users\\ka\\Documents\\Visual Studio 2017\\Projects\\ConsoleApp1\\OpenGLTest\\vertex.shader",
-		"c:\\Users\\ka\\Documents\\Visual Studio 2017\\Projects\\ConsoleApp1\\OpenGLTest\\fragment.shader");
+		"./vertex.shader",
+		"./fragment.shader");
 	programer->Init();
 
 	ShaderProgramer* lightProgramer = new ShaderProgramer(
-		"c:\\Users\\ka\\Documents\\Visual Studio 2017\\Projects\\ConsoleApp1\\OpenGLTest\\lightvertex.shader",
-		"c:\\Users\\ka\\Documents\\Visual Studio 2017\\Projects\\ConsoleApp1\\OpenGLTest\\lightfragment.shader");
+		"./lightvertex.shader",
+		"./lightfragment.shader");
 	lightProgramer->Init();
 	programer->UseThisProgram();
 
@@ -634,8 +634,8 @@ int main()
 	vao->BindElementBufferObject(sizeof(indices), indices);
 
 
-	auto textureid = TexureManager::CreateTexture("C:\\Users\\ka\\Pictures\\VSBGIMG\\container2.png");
-	auto spectextureid = TexureManager::CreateTexture("C:\\Users\\ka\\Pictures\\VSBGIMG\\container2_specular.png");
+	auto textureid = TexureManager::CreateTexture("../resources/container2.png");
+	auto spectextureid = TexureManager::CreateTexture("../resources/container2_specular.png");
 
 
 	VertexAttributeObject* vao1 = new VertexAttributeObject();
